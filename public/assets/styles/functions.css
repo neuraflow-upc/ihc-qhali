@@ -66,7 +66,12 @@ header nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 400px;
+    height: 300px;
+}
+
+.hero section img {
+    height: 300px;
+    margin-top: 6px;
 }
 
 .hero_top {
@@ -76,100 +81,44 @@ header nav {
     justify-content: space-around;
     padding: 60px 40px;
     flex-wrap: wrap;
-    height: 400px;
-}
-
-.hero_top img {
-    height: 400px;
 }
 
 .hero_top #text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
+    text-align: right;
     gap: 12px;
-    max-width: 450px;
+    max-width: 500px;
 }
 
-.hero_top #text h2 {
+.hero h3 {
     font-size: 1.5rem;
     font-weight: 800;
 }
 
-.hero_top #text p {
+.hero p {
     font-size: 1rem;
     font-weight: 400;
-}
-
-.hero_top #text button {
-    padding: 10px 25px;
-    border: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    background-color: #004B87;
-    color: #fff;
-    border-radius: 25px;
-    cursor: pointer;
+    line-height: 2rem;
 }
 
 .hero_middle {
     background-color: #f4f4f4;
-    height: 600px;
-}
-
-.hero_middle h2 {
-    text-align: center;
-    padding: 0 0 30px 0;
-}
-
-.features_grid {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 40px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
 }
 
-.features_grid div {
+.hero_middle #text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 300px;
-    height: 450px;
-    padding: 0 25px;
-    background-color: #004B87;
-    border-radius: 10px;
-}
-
-.features_grid img {
-    width: 300px;
-    border-radius: 10px 10px 0 0;
-    mask-image: linear-gradient(to bottom, #004B87 40%, transparent 100%);
-}
-
-.features_grid h3 {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: 550;
-    color: #fff;
-}
-
-.features_grid p {
-    margin-top: 20px;
-    margin-bottom: 25px;
-    color: #fff;
-    font-size: 0.85rem;
-}
-
-.features_grid button {    
-    padding: 10px 70px;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 700;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    max-width: 500px;
 }
 
 .hero_bottom {
@@ -179,30 +128,15 @@ header nav {
     justify-content: space-around;
     padding: 60px 40px;
     flex-wrap: wrap;
-    height: 400px;
-}
-
-.hero_bottom img {
-    width: 300px;
 }
 
 .hero_bottom #text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
+    text-align: right;
     gap: 12px;
     max-width: 500px;
-}
-
-.hero_bottom h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-.hero_bottom p {
-    font-size: 1rem;
-    font-weight: 400;
 }
 
 footer {
