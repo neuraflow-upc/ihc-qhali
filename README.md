@@ -1,12 +1,7 @@
 Somos el Team Neuraflow presentando nuestro proyecto Qhali. Este proyecto es para el curso de IHC de la universidad Peruana de Ciencias aplicadas.
 Integrantes:
-Ruiz Mideyros, Adrián (U20241E177)
-Contreras Rojas, Cesar Jair (U20241D995)
-Carhuaz Centeno, Briguite Eryka (U20241D932)
-Rojas Gómez, Valeria Alexandra (U202411373)
-Espinoza Gamboa, Paulo Daniel (U202319631)
-Rocha Cotrina, Alvaro (U202411243)
-Pachac Echajaya, Daniel (U20201A361)
+Ruiz Mideyros, Adrián (U20241E177) Contreras Rojas, Cesar Jair (U20241D995) Carhuaz Centeno, Briguite Eryka (U20241D932)
+
 
 El problema que hemos identificado es el aumento en los niveles de estrés y ansiedad de las personas en su día a día y como esto puede afectar a ellos, a su entorno y a sus vidas. Para solucionar está problemas hemos ideado Qhali, una aplicación que le permitira a los usuarios registrar su estado de animado, recibir consejos para aliviar sus dolencias y tendran una linea de contecto directa con servicios medicos en caso de emergencias.
 
