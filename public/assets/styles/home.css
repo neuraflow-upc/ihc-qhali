@@ -134,6 +134,12 @@ header nav {
     box-shadow: 0 6px 14px rgba(0, 75, 135, 0.25);
 }
 
+#img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero_middle {
     background-color: #f4f4f4;
     height: 600px;
@@ -158,7 +164,6 @@ header nav {
     text-align: center;
     width: 300px;
     height: 450px;
-    padding: 0 25px;
     background-color: #004B87;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -180,6 +185,7 @@ header nav {
     font-size: 1.2em;
     font-weight: 550;
     color: #fff;
+    padding: 0 25px;
 }
 
 .features_grid p {
@@ -187,6 +193,7 @@ header nav {
     margin-bottom: 25px;
     color: #fff;
     font-size: 0.85rem;
+    padding: 0 25px;
 }
 
 .features_grid button {    
@@ -251,8 +258,6 @@ footer {
     font-size: 0.9rem;
 }
 
-
-/* Modal aviso go_app */
 #goAppNotice {
   position: fixed;
   inset: 0;
@@ -312,4 +317,41 @@ footer {
 
 .goapp_modal .close_modal:hover {
   background: #003F72;
+}
+
+@media (max-width: 768px) {
+  header { height: 56px; }
+  header nav { gap: 12px; margin-right: 12px; }
+  .header_link { width: auto; height: 40px; padding: 0 10px; font-size: 0.9rem; }
+  .go_app { width: auto; padding: 0 14px; height: 36px; font-size: 0.9rem; }
+
+  .hero section { min-height: unset; padding: 32px 16px; }
+  .hero_top, .hero_middle, .hero_bottom { height: auto; padding: 32px 16px; }
+
+  .hero_top { flex-direction: column; gap: 16px; }
+  .hero_top img { height: auto; max-width: 85%; margin: 0 auto; }
+  .hero_top #text { align-items: center; text-align: center; max-width: none; }
+  .hero_top #text h2 { font-size: 1.25rem; }
+  .hero_top #text p { font-size: 0.95rem; line-height: 1.6rem; }
+
+  .hero_middle { height: auto; }
+  .features_grid { gap: 16px; padding: 0 8px; }
+  .features_grid div { width: 100%; max-width: 360px; height: auto; padding-bottom: 18px; }
+  .features_grid img { width: 100%; }
+  .features_grid button { width: 100%; max-width: 260px; }
+
+  .hero_bottom { flex-direction: column; gap: 16px; }
+  .hero_bottom img { width: 85vw; max-width: 420px; }
+  .hero_bottom #text { align-items: center; text-align: center; max-width: none; }
+
+  footer { font-size: 0.85rem; padding: 16px; }
+}
+
+@media (max-width: 400px) {
+  header nav { gap: 8px; }
+  .header_link { display: none; }
+  .go_app { padding: 0 12px; }
+
+  .hero_top #text h2 { font-size: 1.1rem; }
+  .features_grid div { max-width: 320px; }
 }
