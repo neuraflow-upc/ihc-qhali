@@ -89,7 +89,12 @@ header nav {
 
 .hero section img {
     height: 300px;
-    margin-top: 6px;
+}
+
+#img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero_top {
@@ -157,12 +162,6 @@ header nav {
     max-width: 500px;
 }
 
-#img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 footer {
     width: 100%;
     background-color: #f4f4f4;
@@ -172,96 +171,93 @@ footer {
 }
 
 #goAppNotice {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
 .goapp_modal {
-  background: #ffffff;
-  padding: 24px 28px;
-  border-radius: 14px;
-  width: 90%;
-  max-width: 340px;
-  box-shadow: 0 8px 28px rgba(0,0,0,.25);
-  text-align: center;
-  font-family: Poppins, sans-serif;
+    background: #ffffff;
+    padding: 24px 28px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 340px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.25);
+    text-align: center;    
 }
 
 .goapp_modal h4 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-  color: #004B87;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #004B87;
 }
 
 .goapp_modal p {
-  font-size: .9rem;
-  margin: 0 0 14px;
-  color: #222;
+    font-size: .9rem;
+    margin: 0 0 14px;
+    color: #222;
 }
 
 .loading_spinner {
-  width: 44px;
-  height: 44px;
-  margin: 0 auto 16px;
-  border: 5px solid #e3edf6;
-  border-top-color: #004B87;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 16px;
+    border: 5px solid #e3edf6;
+    border-top-color: #004B87;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+    to { transform: rotate(360deg); }
 }
 
 .goapp_modal .close_modal {
-  padding: 8px 18px;
-  border: none;
-  background: #004B87;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 25px;
-  cursor: pointer;
+    padding: 8px 18px;
+    border: none;
+    background: #004B87;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
 .goapp_modal .close_modal:hover {
-  background: #003F72;
+    background: #003F72;
 }
 
 @media (max-width: 768px) {
-  header { height: 56px; }
-  header nav { gap: 12px; margin-right: 12px; }
-  .header_link { width: auto; height: 40px; padding: 0 10px; font-size: 0.9rem; }
-  .go_app { width: auto; padding: 0 14px; height: 36px; font-size: 0.9rem; }
+    header { height: 56px; }
+    header nav { gap: 10px; margin-right: 12px; }
+    .header_link { width: auto; height: 56px; padding: 0 10px; font-size: 0.9rem; }
+    .go_app { width: auto; padding: 0 14px; height: 40px; font-size: 0.9rem; }
 
-  .hero section { height: auto; padding: 32px 16px; }
-  .hero section img { height: auto; max-width: 85%; margin: 0 auto 12px; }
+    .hero section { height: auto; padding: 32px 16px; }
+    .hero section img { height: auto; max-width: 85%; margin: 0 auto 12px; }
 
-  .hero_top, .hero_middle, .hero_bottom {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-  }
+    .hero_top, .hero_middle, .hero_bottom {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+    }
 
-  .hero_top #text, .hero_middle #text, .hero_bottom #text {
-    align-items: center;
-    text-align: center;
-    max-width: none;
-  }
+    .hero_top #text, .hero_middle #text, .hero_bottom #text {
+        align-items: center;
+        text-align: center;
+        max-width: none;
+    }
 
-  .hero h3 { font-size: 1.25rem; }
-  .hero p { font-size: 0.95rem; line-height: 1.6rem; }
+    .hero h3 { font-size: 1.25rem; }
+    .hero p { font-size: 0.95rem; line-height: 1.6rem; }
 
-  footer { font-size: 0.85rem; padding: 16px; }
-}
+    footer { font-size: 0.85rem; padding: 16px; }
 
-@media (max-width: 400px) {
-  header nav { gap: 8px; }
-  .header_link { display: none; }
-  .go_app { padding: 0 12px; }
+    .hero_middle { flex-direction: column; }
+    .hero_middle #img { order: 1; }
+    .hero_middle #text { order: 2; }
 }
