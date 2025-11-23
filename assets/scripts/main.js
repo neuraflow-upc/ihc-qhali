@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const targets = document.querySelectorAll('#go_app');
+  const targets = document.querySelectorAll('.go_app');
   targets.forEach(el => {
     el.addEventListener('click', e => {
       e.preventDefault();
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.id = 'goAppNotice';
     overlay.innerHTML = `
       <div class="goapp_modal">
-        <h4 id="goAppTitle">Redirección</h4>
+        <h4>Redirección</h4>
         <p>Este botón redirigirá a la aplicación. Cargando...</p>
         <div class="loading_spinner"></div>
         <button type="button" class="close_modal">Cerrar</button>

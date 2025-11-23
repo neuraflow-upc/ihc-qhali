@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qhali</title>
-    <link rel="stylesheet" href="assets/styles/home.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -13,52 +13,52 @@
 </head>
 <body>
 <header>
-    <a href="home.html">
+    <a class="a_logo" href="index.html">
         <img class="logo" src="assets/images/Qhali_Imagotipo.png">
     </a>
     <nav>
-        <a class="header_link active" href="home.html">Home</a>
+        <a class="header_link active" href="index.html">Home</a>
         <a class="header_link" href="functions.html">Funciones</a>
-        <a class="go_app" id="go_app" href="#">Comienza</a>
+        <a class="go_app" id="header_go_app" href="#">Comienza</a>
     </nav>
 </header>
-<main class="hero">
-    <section class="hero_top">
-        <div id="img"><img src="assets/images/ChicaRespirando.png"></div>
-        <div id="text">
+<main>
+    <section class="hero_section" id="hero_top">
+        <img src="assets/images/ChicaRespirando.png">
+        <div class="text">
             <h2>Tu espacio de calma, tu camino hacia el bienestar</h2>
             <p>En Qhali creemos que la tranquilidad interior es el primer paso hacia una vida plena. Nuestra plataforma te ofrece herramientas simples y efectivas para manejar la ansiedad, reducir el estrés y encontrar el equilibrio que necesitas en tu día a día.</p>
-            <button id="go_app">Comienza</button>
+            <button class="go_app">Comienza</button>
         </div>
     </section>
 
-    <section class="hero_middle">
+    <section class="hero_section" id="hero_middle">
         <h2>Funcionalidades</h2>
-        <div class="features_grid">
-            <div>
+        <section class="features">
+            <article>
                 <img src="assets/images/MujerYoga1.png">
                 <h3>Monitoreo de la salud mental en tiempo real</h3>
                 <p>Analiza voz, texto y signos vitales para detectar estrés, ansiedad o depresión.</p>
-                <a href="functions.html"><button>Ver más</button></a>
-            </div>
-            <div>
+                <a href="functions.html" class="features_button">Ver más</a>
+            </article>
+            <article>
                 <img src="assets/images/CarreteraFondo.png">
                 <h3>Sistema de alertas y recordatorios</h3>
                 <p>En caso de alteraciones críticas, envía notificaciones y mensajes a contactos de confianza.</p>
-                <a href="functions.html"><button>Ver más</button></a>
-            </div>
-            <div>
+                <a href="functions.html" class="features_button">Ver más</a>
+            </article>
+            <article>
                 <img src="assets/images/MujerYoga2.png">
                 <h3>Herramientas de apoyo y recomendaciones</h3>
                 <p>Accede a ejercicios de respiración, meditación guiada y consejos personalizados.</p>
-                <a href="functions.html"><button>Ver más</button></a>
-            </div>
-        </div>
+                <a href="functions.html" class="features_button">Ver más</a>
+            </area>
+        </section>
     </section>
 
-    <section class="hero_bottom">
-        <div id="img"><img src="assets/images/ChicoTranquilo.png" alt="Chico Tranquilo"></div>
-        <div id="text">
+    <section class="hero_section" id="hero_bottom">
+        <img src="assets/images/ChicoTranquilo.png">
+        <div class="text">
             <h3>Nuestro Proposito</h3>
             <p>En Qhali trabajamos para cuidar la salud mental de las personas, ofreciendo herramientas que detectan y alivian el estrés, la ansiedad o la depresión. A través de la tecnología y el acompañamiento humano, brindamos apoyo inmediato y accesible para mejorar el bienestar diario.</p>
         </div>

@@ -13,9 +13,13 @@ header {
     align-items: center;
 }
 
-header .logo {
+header .a_logo {
     height: 50px;
     margin-left: 10px;
+}
+
+header .logo {
+    height: 50px;
 }
 
 header .logo:hover {
@@ -80,62 +84,40 @@ header nav {
     box-shadow: 0 6px 14px rgba(0, 75, 135, 0.25);
 }
 
-.hero section {
+main {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 300px;
 }
 
-.hero section img {
-    height: 300px;
-}
-
-#img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero_top {
-    background-color: #fff;
+main section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 60px 40px;
-    flex-wrap: wrap;
+    padding: 0 40px;
 }
 
-.hero_top #text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    gap: 12px;
-    max-width: 500px;
+main section:nth-child(even) {
+    background-color: #f4f4f4;
 }
 
-.hero h3 {
+main h3 {
     font-size: 1.5rem;
     font-weight: 800;
 }
 
-.hero p {
+main p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
 }
 
-.hero_middle {
-    background-color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px 40px;
-    flex-wrap: wrap;
+main section img {
+    height: 300px;
 }
 
-.hero_middle #text {
+.text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -144,22 +126,9 @@ header nav {
     max-width: 500px;
 }
 
-.hero_bottom {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px 40px;
-    flex-wrap: wrap;
-}
-
-.hero_bottom #text {
-    display: flex;
-    flex-direction: column;
+.text:nth-child(even) {
     align-items: flex-end;
     text-align: right;
-    gap: 12px;
-    max-width: 500px;
 }
 
 footer {
@@ -232,32 +201,32 @@ footer {
 
 @media (max-width: 768px) {
     header { height: 56px; }
-    header nav { gap: 10px; margin-right: 12px; }
+    header nav { gap: 8px; margin-right: 10px; }
+    header .a_logo { margin-left: 8px;}
     .header_link { width: auto; height: 56px; padding: 0 10px; font-size: 0.9rem; }
-    .go_app { width: auto; padding: 0 14px; height: 40px; font-size: 0.9rem; }
+    #header_go_app { width: auto; padding: 0 14px; height: 40px; font-size: 0.9rem; }
 
-    .hero section { height: auto; padding: 32px 16px; }
-    .hero section img { height: auto; max-width: 85%; margin: 0 auto 12px; }
-
-    .hero_top, .hero_middle, .hero_bottom {
+    main section {
         flex-direction: column;
-        gap: 16px;
         align-items: center;
         justify-content: center;
+        padding: 20px;
     }
 
-    .hero_top #text, .hero_middle #text, .hero_bottom #text {
+    main section img { height: auto; max-width: 80%; margin: 0 auto 12px; }
+
+    main h3 { font-size: 1.25rem; }
+    main p { font-size: 0.95rem; line-height: 1.6rem; }
+
+    .text, .text:nth-child(even) {
         align-items: center;
         text-align: center;
-        max-width: none;
+        max-width: 90%;
     }
-
-    .hero h3 { font-size: 1.25rem; }
-    .hero p { font-size: 0.95rem; line-height: 1.6rem; }
+    
+    .middle { flex-direction: column; }
+    .middle img { order: 1; }
+    .middle .text { order: 2; }
 
     footer { font-size: 0.85rem; padding: 16px; }
-
-    .hero_middle { flex-direction: column; }
-    .hero_middle #img { order: 1; }
-    .hero_middle #text { order: 2; }
 }
