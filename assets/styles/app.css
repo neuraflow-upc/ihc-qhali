@@ -40,6 +40,17 @@ body {
     opacity: 0.8;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 10px;
+    line-height: 1;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -1264,6 +1275,7 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 12px 20px;
+        position: relative;
     }
 
     .nav-left {
@@ -1274,8 +1286,34 @@ body {
         height: 30px;
     }
 
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #003d6b;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .user-name {
