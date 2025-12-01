@@ -8,7 +8,27 @@ document.addEventListener('DOMContentLoaded', () => {
   initSupportForms();
   initProfile();
   initLogoHome();
+  initMobileMenu();
 });
+
+function initMobileMenu() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Cerrar menú al hacer click en un link
+    const links = navLinks.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+}
 
 function initLogoHome() {
   const logo = document.getElementById('logoHome');
