@@ -104,7 +104,7 @@ header {
     background-color: #003F72;
 }
 
-#header_go_app {
+.go_app {
     cursor: pointer;
     border-radius: 25px;
     font-weight: 600;
@@ -119,12 +119,12 @@ header {
     box-shadow: 0 4px 15px rgba(0, 75, 135, 0.3);
 }
 
-#header_go_app:hover {    
+.go_app:hover {    
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 10px 24px rgba(0, 75, 135, 0.35);
 }
 
-#header_go_app:active {
+.go_app:active {
     transform: translateY(0) scale(0.98);
     box-shadow: 0 6px 14px rgba(0, 75, 135, 0.25);
 }
@@ -400,7 +400,7 @@ footer {
         padding: 4px 4px; 
         font-size: 0.6rem; 
     }
-    #header_go_app { 
+    .go_app { 
         padding: 4px 6px; 
         font-size: 0.7rem; 
     }

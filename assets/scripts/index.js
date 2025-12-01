@@ -28,9 +28,25 @@ function showGoAppNotice() {
     
   document.body.appendChild(overlay);
   
-  overlay.querySelector('.close_modal').addEventListener('click', () => overlay.remove());
+  const redirectTimeout = setTimeout(() => {
+    window.location.href = 'login.html';
+  }, 2000);
+
+  const closeModal = () => {
+    clearTimeout(redirectTimeout);
+    overlay.remove();
+    document.removeEventListener('keydown', handleEsc);
+  };
+
+  const handleEsc = (e) => {
+    if (e.key === 'Escape') closeModal();
+  };
+
+  document.addEventListener('keydown', handleEsc);
+  
+  overlay.querySelector('.close_modal').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => {
-    if (e.target === overlay) overlay.remove();
+    if (e.target === overlay) closeModal();
   });
 }
 

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qhali</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <script src="assets/scripts/app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img class="logo" src="assets/images/Qhali_Imagotipo.png" id="logoHome">
+        </div>
+        <div class="nav-links">
+            <a href="#recursos" class="nav-link">Recursos</a>
+            <a href="#asistente" class="nav-link">Asistente IA</a>
+            <a href="#soporte" class="nav-link">Soporte</a>
+        </div>
+        <div class="nav-right" id="navRight">
+            <span class="user-name">Manuel Chávez</span>
+            <div class="user-avatar">MC</div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="inicio" class="panel-section" style="display: block;">
+            <div class="panel-left">
+                <h2>Registra tu día</h2>
+                <p class="subtitle">¿Cómo te sientes hoy?</p>
+                <div class="mood-selector">
+                    <button class="mood-btn" data-mood="5">😊</button>
+                    <button class="mood-btn" data-mood="4">🙂</button>
+                    <button class="mood-btn" data-mood="3">😐</button>
+                    <button class="mood-btn" data-mood="2">☹️</button>
+                    <button class="mood-btn" data-mood="1">😢</button>
+                </div>
+                <div class="mood-colors">
+                    <span class="color-dot green"></span>
+                    <span class="color-dot blue"></span>
+                    <span class="color-dot purple"></span>
+                    <span class="color-dot red"></span>
+                    <span class="color-dot gray"></span>
+                </div>
+                
+                <div class="devices-section">
+                    <h3>Dispositivos conectados:</h3>
+                    <div class="device-cards">
+                        <div class="device-card">
+                            <div class="device-icon">⌚</div>
+                            <p class="device-name">Galaxy Fit 3</p>
+                            <div class="device-stats">
+                                <span class="heart-rate">62-87</span>
+                                <span class="steps">10:47</span>
+                            </div>
+                        </div>
+                        <div class="device-card">
+                            <div class="device-icon">⌚</div>
+                            <p class="device-name">Apple SE</p>
+                            <div class="device-stats">
+                                <span class="heart-rate">62-87</span>
+                                <span class="steps">10:47</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-device-btn">➕</button>
+                </div>
+            </div>
+
+            <div class="panel-right">
+                <div class="current-status">
+                    <h2>Estado actual</h2>
+                    <div class="status-indicators">
+                        <div class="status-item">
+                            <span class="label">Estrés</span>
+                            <div class="status-circle">20%</div>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Ansiedad</span>
+                            <div class="status-circle">20%</div>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Depresión</span>
+                            <div class="status-circle">50%</div>
+                        </div>
+                    </div>
+                    <div class="mood-indicator">
+                        <div class="mood-face">😊</div>
+                        <p class="mood-status">Feliz</p>
+                    </div>
+                </div>
+
+                <div class="notes-history">
+                    <h3>Historial de notas</h3>
+                    <div class="notes-grid">
+                        <div class="note-card yellow">
+                            <p>"Voy a lograrlo, paso a paso. No me detengo."</p>
+                        </div>
+                        <div class="note-card yellow">
+                            <p>"Soy capaz, fuerte y constante. Nada me frena."</p>
+                        </div>
+                        <div class="note-card green">
+                            <p>"Hoy doy lo mejor de mí. Mi futuro lo vale."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exercises-section" style="display: none;">
+            <h2>Recomendación de Ejercicios</h2>
+            <p class="subtitle">Retos del día</p>
+
+            <div class="exercises-grid">
+                <div class="exercise-card">
+                    <img src="assets/images/MujerYoga1.png">
+                    <div class="exercise-content">
+                        <h3>Ejercicios de respiración</h3>
+                        <p>Respiraciones pausadas y tranquilizantes</p>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <img src="assets/images/CarreteraFondo.png">
+                    <div class="exercise-content">
+                        <h3>Ejercicios de meditación</h3>
+                        <p>Meditaciones rápidas y calmadas</p>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <img src="assets/images/MujerYoga2.png">
+                    <div class="exercise-content">
+                        <h3>Ejercicios de relajación</h3>
+                        <p>Técnicas rápidas y pausadas de relajación</p>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-buttons">
+                <button class="btn-emergency">LLAMAR AL MINSA</button>
+                <button class="btn-emergency">LLAMAR CONTACTOS DE EMERGENCIA</button>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources-section" style="display: none;">
+            <h2>Recursos</h2>
+
+            <div class="resource-category">
+                <div class="category-header">
+                    <img src="assets/images/MujerYoga1.png" alt="Ejercicios">
+                    <h3>Ejercicios recomendados</h3>
+                </div>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <img src="assets/images/MujerYoga1.png" alt="Ejercicio 1">
+                        <div class="resource-info">
+                            <h4>Ejercicio 1</h4>
+                            <p class="resource-detail">01:30 MIN</p>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <img src="assets/images/MujerYoga2.png" alt="Ejercicio 2">
+                        <div class="resource-info">
+                            <h4>Ejercicio 2</h4>
+                            <p class="resource-detail">01:30 MIN</p>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <img src="assets/images/CarreteraFondo.png" alt="Ejercicio 3">
+                        <div class="resource-info">
+                            <h4>Ejercicio 3</h4>
+                            <p class="resource-detail">01:30 MIN</p>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <img src="assets/images/MujerYoga1.png" alt="Ejercicio 4">
+                        <div class="resource-info">
+                            <h4>Ejercicio 4</h4>
+                            <p class="resource-detail">01:30 MIN</p>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <img src="assets/images/MujerYoga2.png" alt="Ejercicio 5">
+                        <div class="resource-info">
+                            <h4>Ejercicio 5</h4>
+                            <p class="resource-detail">01:30 MIN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-footer">
+                    <button class="btn-category">Modo examen</button>
+                    <button class="btn-category">Nueva Nota emocional</button>
+                </div>
+            </div>
+
+            <div class="resource-category">
+                <div class="category-header music">
+                    <img src="assets/images/MujerYoga1.png" alt="Música">
+                    <h3>Música Relajante</h3>
+                </div>
+                <div class="music-grid">
+                    <div class="music-card">
+                        <div class="music-icon">🎵</div>
+                        <h4>Weightless</h4>
+                        <p>Marconi Union</p>
+                    </div>
+                    <div class="music-card">
+                        <div class="music-icon">🎵</div>
+                        <h4>Holocene</h4>
+                        <p>Bon Iver</p>
+                    </div>
+                    <div class="music-card">
+                        <div class="music-icon">🎵</div>
+                        <h4>Bloom</h4>
+                        <p>The Paper Kites</p>
+                    </div>
+                    <div class="music-card">
+                        <div class="music-icon">🎵</div>
+                        <h4>Moon River</h4>
+                        <p>Frank Ocean</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-category">
+                <div class="category-header meditation">
+                    <img src="assets/images/CarreteraFondo.png" alt="Meditación">
+                    <h3>Meditación Rápida</h3>
+                </div>
+                <div class="meditation-grid">
+                    <div class="meditation-card">
+                        <div class="meditation-icon">▶</div>
+                        <h4>1-Minute Breath</h4>
+                        <p>Deepak Chopra</p>
+                    </div>
+                    <div class="meditation-card">
+                        <div class="meditation-icon">▶</div>
+                        <h4>Calm Now</h4>
+                        <p>Jason Stephenson</p>
+                    </div>
+                    <div class="meditation-card">
+                        <div class="meditation-icon">▶</div>
+                        <h4>Just Breathe</h4>
+                        <p>Tara Brach</p>
+                    </div>
+                    <div class="meditation-card">
+                        <div class="meditation-icon">▶</div>
+                        <h4>Mini Reset</h4>
+                        <p>Headspace</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="asistente" class="assistant-section" style="display: none;">
+            <h2>Asistente IA</h2>
+            
+            <div class="assistant-container">
+                <aside class="chat-sidebar">
+                    <button class="new-chat-btn">Nuevo Chat</button>
+                    <div class="chat-history">
+                        <div class="chat-item active">Exposición estresante</div>
+                        <div class="chat-item">Camping relajante</div>
+                        <div class="chat-item">Proyecto nuevo</div>
+                        <div class="chat-item">Hacer galletas de coco</div>
+                        <div class="chat-item">Quimioterapia</div>
+                        <div class="chat-item">Música recomendada</div>
+                    </div>
+                </aside>
+
+                <main class="chat-main">
+                    <div class="audio-analysis-card">
+                        <div class="audio-player">
+                            <button class="play-btn">▶</button>
+                            <div class="waveform">
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                                <span class="wave-bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="analysis-section">
+                            <h3>Análisis del audio</h3>
+                            <div class="emotion-indicators">
+                                <div class="emotion-item">
+                                    <span class="emotion-label">Estrés</span>
+                                    <div class="emotion-circle">
+                                        <svg viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="40" />
+                                            <circle cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="125.6" />
+                                        </svg>
+                                        <span class="emotion-value">50%</span>
+                                    </div>
+                                </div>
+                                <div class="emotion-item">
+                                    <span class="emotion-label">Ansiedad</span>
+                                    <div class="emotion-circle">
+                                        <svg viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="40" />
+                                            <circle cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="125.6" />
+                                        </svg>
+                                        <span class="emotion-value">50%</span>
+                                    </div>
+                                </div>
+                                <div class="emotion-item">
+                                    <span class="emotion-label">Depresión</span>
+                                    <div class="emotion-circle">
+                                        <svg viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="40" />
+                                            <circle cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="125.6" />
+                                        </svg>
+                                        <span class="emotion-value">50%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages">
+                        <div class="message user-message">
+                            <p>Hoy me siento sin ganas de hacer nada, todo me sale mal y no puedo concentrarme, siento que nadie me entiende y solo quiero dormir todo el día</p>
+                        </div>
+                        <div class="message assistant-message">
+                            <p>He notado que tus palabras reflejan cansancio emocional y desánimo/tristeza. Puede ser un signo de agotamiento o de algo más. Te invito a escribir o hablar más sobre estos días. ¿Has tenido algún día de descanso hoy que te haya hecho sentir bien últimamente? continúame más de cómo te sientes</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <input type="text" class="chat-input" placeholder="Escribe tu mensaje...">
+                        <button class="voice-btn">🎤</button>
+                    </div>
+
+                    <button class="test-btn">Iniciar test</button>
+                </main>
+            </div>
+        </section>
+
+        <section id="soporte" class="support-section" style="display: none;">
+            <h2>Soporte</h2>
+
+            <div class="support-grid">
+                <div class="support-card">
+                    <h3>Agendar consejería</h3>
+                    <form class="support-form" id="counselingForm">
+                        <div class="form-group">
+                            <label for="counseling-date">Fecha</label>
+                            <input type="date" id="counseling-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="counseling-time">Hora</label>
+                            <input type="time" id="counseling-time" required>
+                        </div>
+                        <button type="submit" class="btn-confirm">Confirmar</button>
+                    </form>
+                </div>
+
+                <div class="support-card">
+                    <h3>Comunidad Anónima</h3>
+                    <form class="support-form" id="communityForm">
+                        <div class="form-group">
+                            <label for="experience">Experiencia:</label>
+                            <textarea id="experience" rows="5" placeholder="Comparte tu experiencia..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-confirm">Confirmar</button>
+                    </form>
+                </div>
+
+                <div class="support-card">
+                    <h3>Sugerencia</h3>
+                    <form class="support-form" id="suggestionForm">
+                        <div class="form-group">
+                            <label for="suggestion-topic">Tema:</label>
+                            <input type="text" id="suggestion-topic" placeholder="Tema de la sugerencia" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="suggestion-description">Descripción:</label>
+                            <textarea id="suggestion-description" rows="4" placeholder="Describe tu sugerencia..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-confirm">Confirmar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="testimonials-section">
+                <h3>Testimonios</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card blue">
+                        <div class="testimonial-header">
+                            <img src="assets/images/MujerYoga1.png" alt="Eduardo Perez">
+                            <h4>Eduardo Perez</h4>
+                        </div>
+                        <p>"Hoy Qhali en línea si me ha salvado la vida con el MINSA, mis notas, listas de las canciones y los ejercicios me han ayudado a mantenerme tranquilo y conectar con MINSA y que pude acudir a una psicologa para controlar mi estado de depresion que algunos dias es muy larga. Ya en control del estado emocional"</p>
+                    </div>
+
+                    <div class="testimonial-card white">
+                        <div class="testimonial-header">
+                            <img src="assets/images/MujerYoga2.png" alt="Ana Maria Garcia">
+                            <h4>Ana Maria Garcia</h4>
+                        </div>
+                        <p>"Trabajo bajo mucha presión y Qhali se ha convertido en mi apoyo diario. La app detectó cuando mi animo estaba demasiado bajo y me recomendó contactar a un especialista. Además, saber que puedo enviar una alerta a mis contactos si pasa algo me da tranquilidad."</p>
+                        <p class="testimonial-footer">"Es discreto, fácil de usar, y realmente útiles en la oficina."</p>
+                    </div>
+
+                    <div class="testimonial-card blue">
+                        <div class="testimonial-header">
+                            <img src="assets/images/CarreteraFondo.png" alt="Carla Ramirez">
+                            <h4>Carla Ramirez</h4>
+                        </div>
+                        <p>"Qhali a sido una cambia total en mi vida, me ayudaba mucho cuando estaba pasando por aprender a controlar mejor mi ansiedad. La comunidad anonima lo que me permitio sentir que no estaba sola, y quiero recalcar que esta aplicacion es normalmente importante."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfil" class="profile-section" style="display: none;">
+            <div class="profile-container">
+                <div class="profile-left">
+                    <div class="profile-header">
+                        <img src="assets/images/MujerYoga1.png" alt="Manuel Chávez" class="profile-photo">
+                        <h2>Manuel Chávez</h2>
+                    </div>
+
+                    <div class="achievements-section">
+                        <h3>Logros</h3>
+                        <div class="achievements-grid">
+                            <div class="achievement">
+                                <div class="trophy silver">🥈</div>
+                                <p>El más veloz</p>
+                            </div>
+                            <div class="achievement">
+                                <div class="trophy gold">🥇</div>
+                                <p>El dragón</p>
+                            </div>
+                            <div class="achievement">
+                                <div class="trophy bronze">🥉</div>
+                                <p>Nova</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mood-summary">
+                        <h3>Resumen Semanal</h3>
+                        <button class="export-btn">Exportar</button>
+                        <div class="mood-week">
+                            <span class="mood-icon">😢</span>
+                            <span class="mood-icon">😞</span>
+                            <span class="mood-icon">😊</span>
+                            <span class="mood-icon">😍</span>
+                            <span class="mood-icon">😊</span>
+                            <span class="mood-icon">😊</span>
+                            <span class="mood-icon">😍</span>
+                        </div>
+                    </div>
+
+                    <div class="mood-summary">
+                        <h3>Resumen Mensual</h3>
+                        <button class="export-btn">Exportar</button>
+                        <div class="mood-month">
+                            <div class="mood-row">
+                                <span class="mood-icon small">😢</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😍</span>
+                                <span class="mood-icon small">😍</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😍</span>
+                            </div>
+                            <div class="mood-row">
+                                <span class="mood-icon small">😢</span>
+                                <span class="mood-icon small">😍</span>
+                                <span class="mood-icon small">😍</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😫</span>
+                                <span class="mood-icon small">😊</span>
+                            </div>
+                            <div class="mood-row">
+                                <span class="mood-icon small">😢</span>
+                                <span class="mood-icon small">😍</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😫</span>
+                                <span class="mood-icon small">😊</span>
+                            </div>
+                            <div class="mood-row">
+                                <span class="mood-icon small">😢</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😫</span>
+                                <span class="mood-icon small">😍</span>
+                            </div>
+                            <div class="mood-row">
+                                <span class="mood-icon small">😢</span>
+                                <span class="mood-icon small">😢</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😞</span>
+                                <span class="mood-icon small">😊</span>
+                                <span class="mood-icon small">😫</span>
+                                <span class="mood-icon small">😍</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="emergency-plan-btn">Plan de Emergencia</button>
+
+                    <div class="emergency-contacts">
+                        <h3>Registrar contacto de emergencia</h3>
+                        <form id="emergencyContactForm">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre:</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Número de celular:</label>
+                                <input type="tel" id="contact-phone" required>
+                            </div>
+                            <div class="contacts-avatars">
+                                <img src="assets/images/MujerYoga1.png" alt="Contact 1">
+                                <img src="assets/images/MujerYoga2.png" alt="Contact 2">
+                            </div>
+                            <button type="submit" class="btn-confirm">Confirmar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="profile-right">
+                    <div class="preferences-card">
+                        <h3>Preferencias</h3>
+                        
+                        <div class="preference-section">
+                            <h4>🔒 Ajustes de Privacidad</h4>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>Compartir ubicación</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Compartir Logros</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Compartir Contactos</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Vincular Calendario</span>
+                            </label>
+                        </div>
+
+                        <div class="preference-section">
+                            <h4>✒️ Personalización</h4>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Modo Noche</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Idioma Inglés</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Modo offline</span>
+                            </label>
+                        </div>
+
+                        <div class="preference-section">
+                            <h4>🔔 Notificaciones</h4>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Logro de reto</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>Pausas activas <small>c/2H</small></span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Recordatorio de Ejercicios</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>Citas Agendadas</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
